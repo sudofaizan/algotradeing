@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<html>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<head>
+  <meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<meta http-equiv='pragma' content='no-cache'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h2 {text-align: center;
+ font-size: 20px;}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #006ca3;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #006ca3;
+}
+
+div {
+  border-radius: 10px;
+  background-color: #006ca3;
+  padding: 20px;
+}
+h1 {
+  font-size: 10px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2 style="color:white">WELCOME TO AUTOTRADER BOT</h2>
+
+<img src="logo.png" alt="Paris" style="width:50%;">
+
+ 
+
+     
+    <input type="text" placeholder="ENTER YOUR TRN ID TO LOGIN"  >
+   
+
+ 
+   
+  
+    <input type="submit" value="LOGIN"
+    onclick="getVal()">
+     <input type="submit" value="GET TRN ID"
+     onclick="location.href='getid.html'">
+     
+     <input type="submit" name="b1" value="CHECK SERVER STATUS"
+ onclick="location.href='signup.html'">
+ <input type="submit" name="b1" value="What is TRN id?"
+ onclick="location.href='/upi/trn.html'">
+ <input type="submit" name="b1" value="RESENT TRADEING RESULTS"
+ onclick="location.href='result.html'">
+ <input type="submit" name="b1" value="SERVER LOG"
+ onclick="location.href='/status/log.html'">
+<a href="/">
+  
+<a href="/">
+  </form>
+</div>
+
+<body style="background-color:black;">
+ <h1 style="color:white">GREETINGS BY TEAM LIZARD FROM DARKWEB</h1>
+</html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+}
+</style>
+ 
+
+<script type="text/javascript" src="func1.js?updated=1234567890>"></script>
+ <script>
+cache.delete(request, {options}).then(function(found) {
+  // your cache entry has been deleted if found
+});
+caches.open('v1').then(function(cache) {
+  cache.delete('/images/image.png').then(function(response) {
+    someUIUpdateFunction();
+  });
+})
+ </script>
+
+  
+
+
+ 
+  
+

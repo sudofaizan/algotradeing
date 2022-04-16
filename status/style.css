@@ -1,0 +1,42 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hacking-animation {
+  background: #151515;
+  color: #eee;
+  height: 100%;
+}
+.hacking-animation__text {
+  bottom: 0;
+  font-family: "Share Tech Mono", monospace;
+  color: #eee;
+  font-size: 18px;
+  left: 0;
+  line-height: 1.5rem;
+  padding: 2rem;
+  position: absolute;
+  right: 0;
+}
+.hacking-animation__character {
+  animation: type 1s linear;
+  color: #45aae7;
+}
+
+@keyframes type {
+  0% {
+    background: #fff;
+    color: #eee;
+  }
+  5% {
+    background: transparent;
+    color: #fff;
+  }
+  100% {
+    background: transparent;
+    color: #45aae7;
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+<script>
+  function myFunction() {
+    /* Get the text field */
+    var copyText = document.getElementById("myInput");
+  
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.value);
+    
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+  }
+  </script>
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+}
+input {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+}
+button {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+}
+h1 {text-align: center;}
+p {text-align: center;}
+pre {
+ 
+  text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+<body>
+<body style="background-color:black;">
+ <h1 class="font-effect-emboss">PAYMENT GATEWAY</h1>
+<p class="font-effect-emboss">Hello User!</p>
+ 
+<div class="text">
+   
+<pre style="color:white">
+   
+
+As you have selected to make payment
+through BTC mode here are some steps
+you need to follow
+
+step 1 : open your BTC WALLET.
+
+step 2 : copy BTC  Address from below and 
+pay the subscription amount on that 
+BTC Address.
+
+<input type="text" value="3Q8uadHeLLSw8vcGiii2bJR2b5F58ixzzi" id="myInput">
+<button onclick="myFunction()">COPY BTC WALLET ADDRESS</button>
+
+step 3 : After completing payment 
+copy your HASH id of that payment and
+past in home page and tap login.
+
+NOTE: 1 HASH id is valid for only one 
+entry
+
+
+<button onclick="location.href='trn.html'">what is HASH id?</button>
+
+<button onclick="location.href='/index.html'">Jump to Login page</button>
+</pre>
+
+
+</div>
+ 
+
+
+</body>
+</html>

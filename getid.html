@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+  background-color: #006ca3;
+  border: none;
+  color: white;
+  padding: 30px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 60px;
+  align-items: center;
+  margin: 30px 15px;
+  cursor: pointer;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #006ca3;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+h2 {text-align: center;
+ font-size: 40px;}
+</style>
+</head>
+<body>
+<h2 style="color:white">WELCOME TO PAYMENT GATEWAY </h2>
+<h2 style="color:white">how would you like to pay? </h2>
+
+<div class="center">
+ <input type="button" class="button" value="Pay with  UPI"
+ onclick="location.href='upi/index.html'">
+ 
+</div>
+<div class="center">
+ <input type="button" class="button" value="Razorpay gateway(Visa/Mastercard)"
+ onclick="location.href='https://rzp.io/i/B05PnfY7'">
+ 
+</div>
+<div class="center">
+ <input type="button" class="button" value="PayU gateway"
+ onclick="location.href='https://pmny.in/5INln7EAjjeK'">
+ 
+</div>
+
+<div class="center">
+  <input type="button" class="button" value="Pay with  BTC"
+  onclick="location.href='/BTC/btc.html'">
+ 
+</div>
+
+ <div class="center">
+   
+   <input type="button" class="button" value="Pay with  PerfectMoney"
+   onclick="location.href='pmoney/perfect.html'">
+</div>
+
+ <div class="center">
+   
+     <input type="button" class="button" value="Pay with  NETELLER"
+     onclick="location.href='/ntlr/ntlr.html'">
+</div>
+ 
+ 
+   
+
+
+</body>
+<body style="background-color:black;">
+</html>
