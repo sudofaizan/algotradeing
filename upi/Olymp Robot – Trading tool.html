@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)https://olympbot.com/en/ -->
+<html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=5.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Olymp Robot – Trading tool</title>
+	<style data-tippy-stylesheet="">.tippy-tooltip[data-animation=fade][data-state=hidden]{opacity:0}.tippy-iOS{cursor:pointer!important;-webkit-tap-highlight-color:transparent}.tippy-popper{pointer-events:none;max-width:calc(100vw - 10px);transition-timing-function:cubic-bezier(.165,.84,.44,1);transition-property:transform}.tippy-tooltip{position:relative;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;background-color:#333;transition-property:visibility,opacity,transform;outline:0}.tippy-tooltip[data-placement^=top]>.tippy-arrow{border-width:8px 8px 0;border-top-color:#333;margin:0 3px;transform-origin:50% 0;bottom:-7px}.tippy-tooltip[data-placement^=bottom]>.tippy-arrow{border-width:0 8px 8px;border-bottom-color:#333;margin:0 3px;transform-origin:50% 7px;top:-7px}.tippy-tooltip[data-placement^=left]>.tippy-arrow{border-width:8px 0 8px 8px;border-left-color:#333;margin:3px 0;transform-origin:0 50%;right:-7px}.tippy-tooltip[data-placement^=right]>.tippy-arrow{border-width:8px 8px 8px 0;border-right-color:#333;margin:3px 0;transform-origin:7px 50%;left:-7px}.tippy-tooltip[data-interactive][data-state=visible]{pointer-events:auto}.tippy-tooltip[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{position:absolute;border-color:transparent;border-style:solid}.tippy-content{padding:5px 9px}</style><link rel="apple-touch-icon" sizes="180x180" href="https://olympbot.com/res/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://olympbot.com/res/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://olympbot.com/res/favicon/favicon-16x16.png">
+	<link rel="manifest" href="https://olympbot.com/res/favicon/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#2A2B30">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#2A2B30">
+            <meta name="description" content="Olymp Robot is created for automated trading on the Olymp Trade platform.">
+    	<link rel="stylesheet" href="./Olymp Robot – Trading tool_files/app.css">
+    <link rel="stylesheet" href="./Olymp Robot – Trading tool_files/regForm.css">
+    <script type="text/javascript" async="" src="./Olymp Robot – Trading tool_files/analytics.js"></script><script type="text/javascript" async="" src="./Olymp Robot – Trading tool_files/js"></script><script async="" src="./Olymp Robot – Trading tool_files/branch-latest.min.js"></script><script src="./Olymp Robot – Trading tool_files/OneSignalSDK.js" async=""></script>
+    <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: '9308a7ff-6a51-48ce-9f0a-cfe0c1b2e187',
+                autoRegister: true,
+                notifyButton: {
+                    enable: false,
+                },
+                welcomeNotification: {
+                    disable: true
+                }
+            });
+        });
+    </script>
+    <script defer="" src="./Olymp Robot – Trading tool_files/app.js"></script>
+<script src="./Olymp Robot – Trading tool_files/OneSignalPageSDKES6.js" async=""></script><style>.swal2-popup.swal2-toast{flex-direction:row;align-items:center;width:auto;padding:.625em;overflow-y:hidden;background:#fff;box-shadow:0 0 .625em #d9d9d9}.swal2-popup.swal2-toast .swal2-header{flex-direction:row;padding:0}.swal2-popup.swal2-toast .swal2-title{flex-grow:1;justify-content:flex-start;margin:0 .6em;font-size:1em}.swal2-popup.swal2-toast .swal2-footer{margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-popup.swal2-toast .swal2-close{position:static;width:.8em;height:.8em;line-height:.8}.swal2-popup.swal2-toast .swal2-content{justify-content:flex-start;padding:0;font-size:1em}.swal2-popup.swal2-toast .swal2-icon{width:2em;min-width:2em;height:2em;margin:0}.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:700}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{font-size:.25em}}.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-popup.swal2-toast .swal2-actions{flex-basis:auto!important;width:auto;height:auto;margin:0 .3125em;padding:0}.swal2-popup.swal2-toast .swal2-styled{margin:.125em .3125em;padding:.3125em .625em;font-size:1em}.swal2-popup.swal2-toast .swal2-styled:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(100,150,200,.5)}.swal2-popup.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;transform:rotate(45deg);border-radius:50%}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.8em;left:-.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-popup.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-toast-animate-success-line-tip .75s;animation:swal2-toast-animate-success-line-tip .75s}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-toast-animate-success-line-long .75s;animation:swal2-toast-animate-success-line-long .75s}.swal2-popup.swal2-toast.swal2-show{-webkit-animation:swal2-toast-show .5s;animation:swal2-toast-show .5s}.swal2-popup.swal2-toast.swal2-hide{-webkit-animation:swal2-toast-hide .1s forwards;animation:swal2-toast-hide .1s forwards}.swal2-container{display:flex;position:fixed;z-index:1060;top:0;right:0;bottom:0;left:0;flex-direction:row;align-items:center;justify-content:center;padding:.625em;overflow-x:hidden;transition:background-color .1s;-webkit-overflow-scrolling:touch}.swal2-container.swal2-backdrop-show,.swal2-container.swal2-noanimation{background:rgba(0,0,0,.4)}.swal2-container.swal2-backdrop-hide{background:0 0!important}.swal2-container.swal2-top{align-items:flex-start}.swal2-container.swal2-top-left,.swal2-container.swal2-top-start{align-items:flex-start;justify-content:flex-start}.swal2-container.swal2-top-end,.swal2-container.swal2-top-right{align-items:flex-start;justify-content:flex-end}.swal2-container.swal2-center{align-items:center}.swal2-container.swal2-center-left,.swal2-container.swal2-center-start{align-items:center;justify-content:flex-start}.swal2-container.swal2-center-end,.swal2-container.swal2-center-right{align-items:center;justify-content:flex-end}.swal2-container.swal2-bottom{align-items:flex-end}.swal2-container.swal2-bottom-left,.swal2-container.swal2-bottom-start{align-items:flex-end;justify-content:flex-start}.swal2-container.swal2-bottom-end,.swal2-container.swal2-bottom-right{align-items:flex-end;justify-content:flex-end}.swal2-container.swal2-bottom-end>:first-child,.swal2-container.swal2-bottom-left>:first-child,.swal2-container.swal2-bottom-right>:first-child,.swal2-container.swal2-bottom-start>:first-child,.swal2-container.swal2-bottom>:first-child{margin-top:auto}.swal2-container.swal2-grow-fullscreen>.swal2-modal{display:flex!important;flex:1;align-self:stretch;justify-content:center}.swal2-container.swal2-grow-row>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-grow-column{flex:1;flex-direction:column}.swal2-container.swal2-grow-column.swal2-bottom,.swal2-container.swal2-grow-column.swal2-center,.swal2-container.swal2-grow-column.swal2-top{align-items:center}.swal2-container.swal2-grow-column.swal2-bottom-left,.swal2-container.swal2-grow-column.swal2-bottom-start,.swal2-container.swal2-grow-column.swal2-center-left,.swal2-container.swal2-grow-column.swal2-center-start,.swal2-container.swal2-grow-column.swal2-top-left,.swal2-container.swal2-grow-column.swal2-top-start{align-items:flex-start}.swal2-container.swal2-grow-column.swal2-bottom-end,.swal2-container.swal2-grow-column.swal2-bottom-right,.swal2-container.swal2-grow-column.swal2-center-end,.swal2-container.swal2-grow-column.swal2-center-right,.swal2-container.swal2-grow-column.swal2-top-end,.swal2-container.swal2-grow-column.swal2-top-right{align-items:flex-end}.swal2-container.swal2-grow-column>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-no-transition{transition:none!important}.swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal{margin:auto}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-container .swal2-modal{margin:0!important}}.swal2-popup{display:none;position:relative;box-sizing:border-box;flex-direction:column;justify-content:center;width:32em;max-width:100%;padding:1.25em;border:none;border-radius:5px;background:#fff;font-family:inherit;font-size:1rem}.swal2-popup:focus{outline:0}.swal2-popup.swal2-loading{overflow-y:hidden}.swal2-header{display:flex;flex-direction:column;align-items:center;padding:0 1.8em}.swal2-title{position:relative;max-width:100%;margin:0 0 .4em;padding:0;color:#595959;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}.swal2-actions{display:flex;z-index:1;box-sizing:border-box;flex-wrap:wrap;align-items:center;justify-content:center;width:100%;margin:1.25em auto 0;padding:0 1.6em}.swal2-actions:not(.swal2-loading) .swal2-styled[disabled]{opacity:.4}.swal2-actions:not(.swal2-loading) .swal2-styled:hover{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1))}.swal2-actions:not(.swal2-loading) .swal2-styled:active{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2))}.swal2-loader{display:none;align-items:center;justify-content:center;width:2.2em;height:2.2em;margin:0 1.875em;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border-width:.25em;border-style:solid;border-radius:100%;border-color:#2778c4 transparent #2778c4 transparent}.swal2-styled{margin:.3125em;padding:.625em 1.1em;box-shadow:none;font-weight:500}.swal2-styled:not([disabled]){cursor:pointer}.swal2-styled.swal2-confirm{border:0;border-radius:.25em;background:initial;background-color:#2778c4;color:#fff;font-size:1.0625em}.swal2-styled.swal2-deny{border:0;border-radius:.25em;background:initial;background-color:#d14529;color:#fff;font-size:1.0625em}.swal2-styled.swal2-cancel{border:0;border-radius:.25em;background:initial;background-color:#757575;color:#fff;font-size:1.0625em}.swal2-styled:focus{outline:0;box-shadow:0 0 0 3px rgba(100,150,200,.5)}.swal2-styled::-moz-focus-inner{border:0}.swal2-footer{justify-content:center;margin:1.25em 0 0;padding:1em 0 0;border-top:1px solid #eee;color:#545454;font-size:1em}.swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;height:.25em;overflow:hidden;border-bottom-right-radius:5px;border-bottom-left-radius:5px}.swal2-timer-progress-bar{width:100%;height:.25em;background:rgba(0,0,0,.2)}.swal2-image{max-width:100%;margin:1.25em auto}.swal2-close{position:absolute;z-index:2;top:0;right:0;align-items:center;justify-content:center;width:1.2em;height:1.2em;padding:0;overflow:hidden;transition:color .1s ease-out;border:none;border-radius:5px;background:0 0;color:#ccc;font-family:serif;font-size:2.5em;line-height:1.2;cursor:pointer}.swal2-close:hover{transform:none;background:0 0;color:#f27474}.swal2-close:focus{outline:0;box-shadow:inset 0 0 0 3px rgba(100,150,200,.5)}.swal2-close::-moz-focus-inner{border:0}.swal2-content{z-index:1;justify-content:center;margin:0;padding:0 1.6em;color:#545454;font-size:1.125em;font-weight:400;line-height:normal;text-align:center;word-wrap:break-word}.swal2-checkbox,.swal2-file,.swal2-input,.swal2-radio,.swal2-select,.swal2-textarea{margin:1em auto}.swal2-file,.swal2-input,.swal2-textarea{box-sizing:border-box;width:100%;transition:border-color .3s,box-shadow .3s;border:1px solid #d9d9d9;border-radius:.1875em;background:inherit;box-shadow:inset 0 1px 1px rgba(0,0,0,.06);color:inherit;font-size:1.125em}.swal2-file.swal2-inputerror,.swal2-input.swal2-inputerror,.swal2-textarea.swal2-inputerror{border-color:#f27474!important;box-shadow:0 0 2px #f27474!important}.swal2-file:focus,.swal2-input:focus,.swal2-textarea:focus{border:1px solid #b4dbed;outline:0;box-shadow:0 0 0 3px rgba(100,150,200,.5)}.swal2-file::-moz-placeholder,.swal2-input::-moz-placeholder,.swal2-textarea::-moz-placeholder{color:#ccc}.swal2-file:-ms-input-placeholder,.swal2-input:-ms-input-placeholder,.swal2-textarea:-ms-input-placeholder{color:#ccc}.swal2-file::placeholder,.swal2-input::placeholder,.swal2-textarea::placeholder{color:#ccc}.swal2-range{margin:1em auto;background:#fff}.swal2-range input{width:80%}.swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}.swal2-range input,.swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}.swal2-input{height:2.625em;padding:0 .75em}.swal2-input[type=number]{max-width:10em}.swal2-file{background:inherit;font-size:1.125em}.swal2-textarea{height:6.75em;padding:.75em}.swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:inherit;color:inherit;font-size:1.125em}.swal2-checkbox,.swal2-radio{align-items:center;justify-content:center;background:#fff;color:inherit}.swal2-checkbox label,.swal2-radio label{margin:0 .6em;font-size:1.125em}.swal2-checkbox input,.swal2-radio input{margin:0 .4em}.swal2-input-label{display:flex;justify-content:center;margin:1em auto}.swal2-validation-message{display:none;align-items:center;justify-content:center;margin:0 -2.7em;padding:.625em;overflow:hidden;background:#f0f0f0;color:#666;font-size:1em;font-weight:300}.swal2-validation-message::before{content:"!";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}.swal2-icon{position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:1.25em auto 1.875em;border:.25em solid transparent;border-radius:50%;font-family:inherit;line-height:5em;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}.swal2-icon.swal2-error{border-color:#f27474;color:#f27474}.swal2-icon.swal2-error .swal2-x-mark{position:relative;flex-grow:1;zoom:1}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}.swal2-icon.swal2-error.swal2-icon-show{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark{-webkit-animation:swal2-animate-error-x-mark .5s;animation:swal2-animate-error-x-mark .5s}.swal2-icon.swal2-warning{border-color:#facea8;color:#f8bb86}.swal2-icon.swal2-info{border-color:#9de0f6;color:#3fc3ee}.swal2-icon.swal2-question{border-color:#c9dae1;color:#87adbd}.swal2-icon.swal2-success{border-color:#a5dc86;color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;transform:rotate(45deg);border-radius:50%}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.4375em;left:-2.0635em;zoom:1;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.6875em;left:1.875em;zoom:1;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}.swal2-icon.swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-.25em;left:-.25em;box-sizing:content-box;width:100%;height:100%;zoom:1;border:.25em solid rgba(165,220,134,.3);border-radius:50%}.swal2-icon.swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;zoom:1;transform:rotate(-45deg)}.swal2-icon.swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;zoom:1;border-radius:.125em;background-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}.swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-animate-success-line-tip .75s;animation:swal2-animate-success-line-tip .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-animate-success-line-long .75s;animation:swal2-animate-success-line-long .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right{-webkit-animation:swal2-rotate-success-circular-line 4.25s ease-in;animation:swal2-rotate-success-circular-line 4.25s ease-in}.swal2-progress-steps{flex-wrap:wrap;align-items:center;max-width:100%;margin:0 0 1.25em;padding:0;background:inherit;font-weight:600}.swal2-progress-steps li{display:inline-block;position:relative}.swal2-progress-steps .swal2-progress-step{z-index:20;flex-shrink:0;width:2em;height:2em;border-radius:2em;background:#2778c4;color:#fff;line-height:2em;text-align:center}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#2778c4}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:#add8e6;color:#fff}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:#add8e6}.swal2-progress-steps .swal2-progress-step-line{z-index:10;flex-shrink:0;width:2.5em;height:.4em;margin:0 -1px;background:#2778c4}[class^=swal2]{-webkit-tap-highlight-color:transparent}.swal2-show{-webkit-animation:swal2-show .3s;animation:swal2-show .3s}.swal2-hide{-webkit-animation:swal2-hide .15s forwards;animation:swal2-hide .15s forwards}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{right:auto;left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}@supports (-ms-accelerator:true){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@-webkit-keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@-webkit-keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@-webkit-keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@-webkit-keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@-webkit-keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@-webkit-keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@-webkit-keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@-webkit-keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@-webkit-keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@-webkit-keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@-webkit-keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@-webkit-keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto!important}body.swal2-no-backdrop .swal2-container{top:auto;right:auto;bottom:auto;left:auto;max-width:calc(100% - .625em * 2);background-color:transparent!important}body.swal2-no-backdrop .swal2-container>.swal2-modal{box-shadow:0 0 10px rgba(0,0,0,.4)}body.swal2-no-backdrop .swal2-container.swal2-top{top:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-container.swal2-top-left,body.swal2-no-backdrop .swal2-container.swal2-top-start{top:0;left:0}body.swal2-no-backdrop .swal2-container.swal2-top-end,body.swal2-no-backdrop .swal2-container.swal2-top-right{top:0;right:0}body.swal2-no-backdrop .swal2-container.swal2-center{top:50%;left:50%;transform:translate(-50%,-50%)}body.swal2-no-backdrop .swal2-container.swal2-center-left,body.swal2-no-backdrop .swal2-container.swal2-center-start{top:50%;left:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-container.swal2-center-end,body.swal2-no-backdrop .swal2-container.swal2-center-right{top:50%;right:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-container.swal2-bottom{bottom:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-container.swal2-bottom-left,body.swal2-no-backdrop .swal2-container.swal2-bottom-start{bottom:0;left:0}body.swal2-no-backdrop .swal2-container.swal2-bottom-end,body.swal2-no-backdrop .swal2-container.swal2-bottom-right{right:0;bottom:0}@media print{body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow-y:scroll!important}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container{position:static!important}}body.swal2-toast-shown .swal2-container{background-color:transparent}body.swal2-toast-shown .swal2-container.swal2-top{top:0;right:auto;bottom:auto;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{top:0;right:0;bottom:auto;left:auto}body.swal2-toast-shown .swal2-container.swal2-top-left,body.swal2-toast-shown .swal2-container.swal2-top-start{top:0;right:auto;bottom:auto;left:0}body.swal2-toast-shown .swal2-container.swal2-center-left,body.swal2-toast-shown .swal2-container.swal2-center-start{top:50%;right:auto;bottom:auto;left:0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{top:50%;right:auto;bottom:auto;left:50%;transform:translate(-50%,-50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{top:50%;right:0;bottom:auto;left:auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-left,body.swal2-toast-shown .swal2-container.swal2-bottom-start{top:auto;right:auto;bottom:0;left:0}body.swal2-toast-shown .swal2-container.swal2-bottom{top:auto;right:auto;bottom:0;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{top:auto;right:0;bottom:0;left:auto}body.swal2-toast-column .swal2-toast{flex-direction:column;align-items:stretch}body.swal2-toast-column .swal2-toast .swal2-actions{flex:1;align-self:stretch;height:2.2em;margin-top:.3125em}body.swal2-toast-column .swal2-toast .swal2-loading{justify-content:center}body.swal2-toast-column .swal2-toast .swal2-input{height:2em;margin:.3125em auto;font-size:1em}body.swal2-toast-column .swal2-toast .swal2-validation-message{font-size:1em}</style><script type="text/javascript">var old_alert = window.alert;
+var old_confirm = window.confirm;
+var temp_element = document;
+var alertDetails = { type: 'alert',alertResponse: true};
+var cqaCustomEvent = new CustomEvent('cqaalert', {detail: alertDetails});
+window.alert = function () {
+alertDetails.type = 'alert';
+old_alert.apply(window, arguments);
+temp_element.dispatchEvent(cqaCustomEvent);
+};
+window.confirm = function () {
+alertDetails.type = 'confirm';
+alertDetails.alertResponse = old_confirm.apply(window, arguments);
+temp_element.dispatchEvent(cqaCustomEvent);
+return alertDetails.alertResponse;
+};</script><script type="text/javascript">function openImageinNewTab(imageBase64){
+var tempcqa_element = document;
+var bugDetails = { screenshot: imageBase64, appname: window.location.hostname};
+var cqacapturebugCustomEvent = new CustomEvent('cqacapturebug', {detail: bugDetails});
+tempcqa_element.dispatchEvent(cqacapturebugCustomEvent);
+};</script><script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script></head>
+<body data-new-gr-c-s-check-loaded="14.1054.0" data-gr-ext-installed="" class="preloader-hidden" style="padding-right: 0px;">
+	<div id="preloader"></div>
+	<div class="wrapper">
+		<header class="site-header sticky">
+			<div class="container">
+				<img width="189" height="39" loading="eager" class="site-header__logo desktop" src="./Olymp Robot – Trading tool_files/logo.svg" alt="">
+				<nav class="site-header__menu">
+					<a class="site-header__menu-item" href="https://olympbot.com/en/#hero">Home</a>
+					<a class="site-header__menu-item" href="https://olympbot.com/en/#about">About us</a>
+					<a class="site-header__menu-item" href="https://olympbot.com/en/#download">Download</a>
+					<a class="site-header__menu-item" href="https://olympbot.com/en/#instruction">Instruction</a>
+					<!-- <a class="site-header__menu-item" href="#rating">Rating</a> -->
+					<a class="site-header__menu-item" href="https://olympbot.com/en/#faq">FAQ</a>
+				</nav>
+				<div class="site-header__locale-picker">
+					<div class="site-header__locale-picker__item-active">
+						<img width="25" height="25" loading="eager" class="site-header__locale-picker__item-image" src="./Olymp Robot – Trading tool_files/en.svg" alt="">
+						<span class="site-header__locale-picker__item-title"></span>
+					</div>
+					<div class="site-header__locale-picker__list-container disappeared">
+						<div class="site-header__locale-picker__close disappeared"></div>
+						<div class="site-header__locale-picker__list os-host os-theme-light os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-scrollbar-vertical-hidden os-host-transition"><div class="os-resize-observer-host"><div class="os-resize-observer observed" style="left: 0px; right: auto;"></div></div><div class="os-size-auto-observer" style="height: calc(100% + 1px); float: left;"><div class="os-resize-observer observed"></div></div><div class="os-content-glue" style="margin: 0px; width: 0px; height: 0px;"></div><div class="os-padding"><div class="os-viewport os-viewport-native-scrollbars-invisible" style=""><div class="os-content" style="padding: 0px; height: 100%; width: 100%;">
+							<a class="site-header__locale-picker__link" href="https://olympbot.com/en/">
+								<img width="20" height="20" loading="eager" class="site-header__locale-picker__item-image" src="./Olymp Robot – Trading tool_files/en.svg" alt="">
+								<span class="site-header__locale-picker__item-title">English</span>
+							</a>
+							<a class="site-header__locale-picker__link" href="https://olympbot.com/id/">
+								<img width="20" height="20" loading="eager" class="site-header__locale-picker__item-image" src="./Olymp Robot – Trading tool_files/id.svg" alt="">
+								<span class="site-header__locale-picker__item-title">Bahasa Indonesia</span>
+							</a>
+							<a class="site-header__locale-picker__link" href="https://olympbot.com/hi/">
+								<img width="20" height="20" loading="eager" class="site-header__locale-picker__item-image" src="./Olymp Robot – Trading tool_files/hi.svg" alt="">
+								<span class="site-header__locale-picker__item-title">हिन्दी, हिंदी</span>
+							</a>
+							<a class="site-header__locale-picker__link" href="https://olympbot.com/vi/">
+								<img width="20" height="20" loading="eager" class="site-header__locale-picker__item-image" src="./Olymp Robot – Trading tool_files/vi.svg" alt="">
+								<span class="site-header__locale-picker__item-title">Tiếng Việt</span>
+							</a>
+							<a class="site-header__locale-picker__link" href="https://olympbot.com/ru/">
+								<img width="20" height="20" loading="eager" class="site-header__locale-picker__item-image" src="./Olymp Robot – Trading tool_files/ru.svg" alt="">
+								<span class="site-header__locale-picker__item-title">Русский</span>
+							</a>
+							<a class="site-header__locale-picker__link" href="https://olympbot.com/th/">
+								<img width="20" height="20" loading="eager" class="site-header__locale-picker__item-image" src="./Olymp Robot – Trading tool_files/th.svg" alt="">
+								<span class="site-header__locale-picker__item-title">ไทย</span>
+							</a>
+							<a class="site-header__locale-picker__link" href="https://olympbot.com/pt/">
+								<img width="20" height="20" loading="eager" class="site-header__locale-picker__item-image" src="./Olymp Robot – Trading tool_files/pt.svg" alt="">
+								<span class="site-header__locale-picker__item-title">Português</span>
+							</a>
+							<a class="site-header__locale-picker__link" href="https://olympbot.com/ko/">
+								<img width="20" height="20" loading="eager" class="site-header__locale-picker__item-image" src="./Olymp Robot – Trading tool_files/ko.svg" alt="">
+								<span class="site-header__locale-picker__item-title">한국어</span>
+							</a>
+							<a class="site-header__locale-picker__link" href="https://olympbot.com/zh/">
+								<img width="20" height="20" loading="eager" class="site-header__locale-picker__item-image" src="./Olymp Robot – Trading tool_files/zh.svg" alt="">
+								<span class="site-header__locale-picker__item-title">中文</span>
+							</a>
+							<a class="site-header__locale-picker__link" href="https://olympbot.com/tr/">
+								<img width="20" height="20" loading="eager" class="site-header__locale-picker__item-image" src="./Olymp Robot – Trading tool_files/tr.svg" alt="">
+								<span class="site-header__locale-picker__item-title">Türkçe</span>
+							</a>
+							<a class="site-header__locale-picker__link" href="https://olympbot.com/es/">
+								<img width="20" height="20" loading="eager" class="site-header__locale-picker__item-image" src="./Olymp Robot – Trading tool_files/es.svg" alt="">
+								<span class="site-header__locale-picker__item-title">Español</span>
+							</a>
+							<a class="site-header__locale-picker__link" href="https://olympbot.com/fr/">
+								<img width="20" height="20" loading="eager" class="site-header__locale-picker__item-image" src="./Olymp Robot – Trading tool_files/fr.svg" alt="">
+								<span class="site-header__locale-picker__item-title">Français</span>
+							</a>
+						</div></div></div><div class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable"><div class="os-scrollbar-track os-scrollbar-track-off"><div class="os-scrollbar-handle" style="transform: translate(0px, 0px);"></div></div></div><div class="os-scrollbar os-scrollbar-vertical os-scrollbar-unusable"><div class="os-scrollbar-track os-scrollbar-track-off"><div class="os-scrollbar-handle" style="transform: translate(0px, 0px);"></div></div></div><div class="os-scrollbar-corner"></div></div>
+					</div>
+				</div>
+                <div id="olympbot-registration" class="olympbot-registration-button">Sign Up</div>
+			</div>
+		</header>
+
+<section class="site-section scrollspy" id="hero">
+	<div class="container">
+		<div class="hero__row">
+			<div class="hero__left">
+					<h1 class="hero__title">Trading robot for<br class="tablet mobile"> <span class="text-green">Olymp Trade</span></h1>
+	<div class="hero__description">
+		<p>Olymp Robot is created for automated trading on the Olymp Trade platform. <br>
+		</p><p class="desktop tablet"></p>
+	</div>
+	<a rel="noreferrer" href="https://chrome.google.com/webstore/detail/olymp-bot-%E2%80%93-olymp-trade-r/epechikapdipcpfihonkhmnknbjmnlmi" class="download-button desktop tablet" target="_blank">
+		<div class="download-button-container">
+			<img width="30" height="30" loading="eager" class="download-button-image" src="./Olymp Robot – Trading tool_files/chrome.svg" alt="">
+			<p class="download-button-title">Download for<br> <b>Google Chrome</b></p>
+		</div>
+	</a>
+				<a rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.olymp.robot" class="download-button-google-play mobile" target="_blank">
+					<img loading="eager" width="300" height="116" class="download-button-image" src="./Olymp Robot – Trading tool_files/play-en.svg" alt="">
+				</a>
+				<!-- <a rel="noreferrer" href="/res/OlympBot.apk" class="download-button-google-play mobile" download>
+					<img loading="eager" width="300" height="116" class="download-button-image" src="/res/icons/other/play-en.svg" alt="">
+				</a> -->
+			</div>
+			<div class="hero__right">
+				<div class="hero__images-container">
+					<img loading="eager" width="660" height="437" class="hero__image-1 desktop tablet" src="./Olymp Robot – Trading tool_files/hero-image.webp" alt="">
+					<img loading="eager" width="402" height="682" class="hero__image-2 mobile" src="./Olymp Robot – Trading tool_files/hero-image-mobile-1.webp" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="site-section desktop tablet" id="counters">
+		<div class="container">
+		<div class="counters__item">
+			<div class="counters__item-title">72%</div>
+			<div class="counters__item-content">Betting accuracy</div>
+		</div>
+		<div class="counters__item">
+			<div class="counters__item-title">$230</div>
+			<div class="counters__item-content">Average deposit</div>
+		</div>
+		<div class="counters__item">
+			<div class="counters__item-title">2 646</div>
+			<div class="counters__item-content">Active users</div>
+		</div>
+		<div class="counters__item">
+			<div class="counters__item-title">$1 881 494</div>
+			<div class="counters__item-content">Paid funds</div>
+		</div>
+	</div>
+</section>
+
+<section class="site-section scrollspy" id="about">
+	<div class="container">
+			<h2 class="site-section__title">About us</h2>
+	<p class="site-section__description">Olymp Robot is an automated trading robot for the Olymp Trade platform. The robot is absolutely free. You can test Olymp Robot on a demo account, and then start trading on a real one. Please note: trading on a real account is only available for activated accounts.</p>
+	<div class="about__grid">
+		<div class="about__grid-item-1">
+			<div class="about__card-first">
+				<div class="about__inline">
+					<img loading="eager" class="about__card-icon" width="41" height="41" src="./Olymp Robot – Trading tool_files/signal.svg" alt="">
+					<h4 class="about__card-title">Autotrading by signals</h4>
+				</div>
+				<p class="about__card-description">Analyze the market with over 20 technical indicators in real-time.</p>
+				<img loading="eager" width="338" height="176" class="about__card-foreground mobileView" src="./Olymp Robot – Trading tool_files/card-foreground.svg" alt="">
+			</div>
+		</div>
+		<div class="about__grid-item-2">
+			<div class="about-grid-item-3">
+				<div class="about__card">
+					<div class="about__inline">
+						<img loading="eager" class="about__card-icon" width="41" height="41" src="./Olymp Robot – Trading tool_files/profit-chart.svg" alt="">
+						<h4 class="about__card-title">Successful<br class="mobile"> strategies</h4>
+					</div>
+					<p class="about__card-description">You can choose one of many strategies.</p>
+				</div>
+				<div class="about__card">
+					<div class="about__inline">
+						<img loading="eager" class="about__card-icon" width="41" height="41" src="./Olymp Robot – Trading tool_files/done.svg" alt="">
+						<h4 class="about__card-title">Simple user<br class="mobile"> interface</h4>
+					</div>
+					<p class="about__card-description">You can easily set up all settings.</p>
+				</div>
+			</div>
+			<div class="about-grid-item-4">
+				<div class="about__card">
+					<div class="about__inline">
+						<img loading="eager" class="about__card-icon" width="41" height="41" src="./Olymp Robot – Trading tool_files/settings.svg" alt="">
+						<h4 class="about__card-title">Convenient<br class="mobile"> setup</h4>
+					</div>
+					<p class="about__card-description">Setting up the robot will take no more than 5 minutes.</p>
+				</div>
+				<div class="about__card">
+					<div class="about__inline">
+						<img loading="eager" class="about__card-icon" width="41" height="41" src="./Olymp Robot – Trading tool_files/headphones.svg" alt="">
+						<h4 class="about__card-title">Support<br class="mobile"> 24/7</h4>
+					</div>
+					<p class="about__card-description">You can get an answer at any time.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
+
+<section class="site-section scrollspy" id="download">
+	<div class="container">
+		<img loading="eager" class="download__image-1 desktop tablet" src="./Olymp Robot – Trading tool_files/download-laptop.webp" alt="">
+			<div class="download__content">
+		<h2 class="site-section__title">Download <span class="text-green">Olymp Robot</span><br class="tablet"> for your device</h2>
+		<p class="site-section__description">Convenient to use on any device.</p>
+		<div class="downloadBack mobile"></div>
+		<div class="download__testimonials">
+			<div class="download__testimonials-header">
+				<div class="download__average-rating">4,5</div>
+				<div class="download__rating">
+					<div class="download__rating-stars">
+						<img loading="eager" class="download__rating-star" width="27" height="25" src="./Olymp Robot – Trading tool_files/star.svg" alt="">
+						<img loading="eager" class="download__rating-star" width="27" height="25" src="./Olymp Robot – Trading tool_files/star.svg" alt="">
+						<img loading="eager" class="download__rating-star" width="27" height="25" src="./Olymp Robot – Trading tool_files/star.svg" alt="">
+						<img loading="eager" class="download__rating-star" width="27" height="25" src="./Olymp Robot – Trading tool_files/star.svg" alt="">
+						<img loading="eager" class="download__rating-star" width="27" height="25" src="./Olymp Robot – Trading tool_files/half-star.svg" alt="">
+					</div>
+					<p class="download__rating-count">2 thousand ratings</p>
+				</div>
+			</div>
+			<div class="download__testimonial-list">
+				<div class="owl-carousel owl-theme owl-loaded">
+					
+					
+					
+				<div class="owl-stage-outer owl-height" style="height: 0px;"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;"><div class="owl-item"><div class="download__testimonial-item">Excellent trading robot! Profitability and risks are regulated, very convenient.</div></div><div class="owl-item"><div class="download__testimonial-item">Works great on an aggressive strategy with signals. Thanks to the developers)</div></div><div class="owl-item"><div class="download__testimonial-item">I put the robot at the beginning and end of the day for a few hours. About + 25% of the deposit per day.</div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot active" aria-label="1"><span></span></button><button role="button" class="owl-dot" aria-label="2"><span></span></button><button role="button" class="owl-dot" aria-label="3"><span></span></button></div></div>
+			</div>
+		</div>
+	</div>
+	<div class="download__links">
+		<div class="download__link desktop tablet">
+			<div class="download__link-group-title">Desktop</div>
+			<a rel="noreferrer" href="https://chrome.google.com/webstore/detail/olymp-bot-%E2%80%93-olymp-trade-r/epechikapdipcpfihonkhmnknbjmnlmi" class="download-button" target="_blank">
+				<div class="download-button-container">
+					<img loading="eager" width="30" height="30" class="download-button-image" src="./Olymp Robot – Trading tool_files/chrome.svg" alt="">
+					<p class="download-button-title">Download for<br> <b>Google Chrome</b></p>
+				</div>
+			</a>
+		</div>
+		<div class="download__link desktop tablet">
+			<a rel="noreferrer" href="https://chrome.google.com/webstore/detail/olymp-bot-%E2%80%93-olymp-trade-r/epechikapdipcpfihonkhmnknbjmnlmi" class="download-button" target="_blank">
+				<div class="download-button-container">
+					<img loading="eager" width="30" height="30" class="download-button-image" src="./Olymp Robot – Trading tool_files/opera.svg" alt="">
+					<p class="download-button-title">Download for <br> <b>Opera</b></p>
+				</div>
+			</a>
+		</div>
+		<div class="download__link desktop tablet">
+			<div class="download__link-group-title">Mobile</div>
+			<a rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.olymp.robot" class="download-button-google-play" target="_blank">
+				<img loading="eager" width="165" height="64" class="download-button-image" src="./Olymp Robot – Trading tool_files/play-en.svg" alt="">
+			</a>
+			<!-- <a rel="noreferrer" href="/res/OlympBot.apk" class="download-button-google-play" download>
+				<img loading="eager" width="165" height="64" class="download-button-image" src="/res/icons/other/play-en.svg" alt="">
+			</a> -->
+		</div>
+	</div>
+	<div class="download__link download__link-google mobile">
+		<div class="download__link-group-title desktop">Mobile</div>
+		<a rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.olymp.robot" class="download-button-google-play" target="_blank">
+			<img loading="eager" width="300" height="116" class="download-button-image" src="./Olymp Robot – Trading tool_files/play-en.svg" alt="">
+		</a>
+		<!-- <a rel="noreferrer" href="/res/OlympBot.apk" class="download-button-google-play" download>
+			<img loading="eager" width="300" height="116" class="download-button-image" src="/res/icons/other/play-en.svg" alt="">
+		</a> -->
+	</div>
+	<div class="pc-versions mobile">
+		<div class="pc-versions__title">Desktop</div>
+		<div class="pc-versions__icon-list">
+			<img loading="eager" width="30" height="30" class="pc-versions__icon" src="./Olymp Robot – Trading tool_files/chrome.svg" alt="">
+			<img loading="eager" width="30" height="30" class="pc-versions__icon" src="./Olymp Robot – Trading tool_files/opera.svg" alt="">
+		</div>
+	</div>
+	</div>
+</section>
+
+<section class="site-section scrollspy" id="instruction">
+	<div class="container">
+			<div class="instruction__inline">
+		<div class="instruction__inline-div">
+			<h2 class="site-section__title">Instruction</h2>
+		</div>
+		<div class="instruction__inline-div">
+			<div class="instruction__tab-group-container">
+				<div class="instruction__tab-group">
+					<a class="instruction__tab active" href="https://olympbot.com/en/#desktop">
+						<span>Desktop</span>
+					</a>
+					<a class="instruction__tab" href="https://olympbot.com/en/#mobile">
+						<span>Mobile</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="instruction__tabs-content-container">
+		<div class="instruction__tab-content" id="desktop">
+			<div class="owl-carousel owl-theme owl-loaded">
+				
+				
+				
+				
+			<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 4640px;"><div class="owl-item active" style="width: 1160px;"><div class="instruction__step" data-hash="first">
+					<div class="instruction__left">
+						<img loading="eager" width="545" height="348" class="instruction__step-image" src="./Olymp Robot – Trading tool_files/instrDesk1.webp" alt="">
+					</div>
+					<div class="instruction__right">
+						<h4 class="instruction__step-title desktop tablet">Download Olymp Robot for your browser</h4>
+						<h4 class="instruction__step-title mobile">Install the app from Google Play</h4>
+						<div class="instruction__step-description desktop tablet">
+							<p>After installation, you can start trading on a demo account. </p>
+							<p class="desktop">To trade on a real account and receive profitable signals from Olymp Robot Cloud Analytics, you need to go through the activation steps.</p>
+						</div>
+						<div class="instruction__step-description mobile">
+							<p>To trade on a real account and receive profitable signals from Olymp Robot Cloud Analytics, you need to go through the activation steps.</p>
+						</div>
+						<a rel="noreferrer" href="https://chrome.google.com/webstore/detail/olymp-bot-%E2%80%93-olymp-trade-r/epechikapdipcpfihonkhmnknbjmnlmi" class="download-button desktop tablet" target="_blank">
+							<div class="download-button-container">
+								<img loading="eager" width="30" height="30" class="download-button-image" src="./Olymp Robot – Trading tool_files/chrome.svg" alt="">
+								<p class="download-button-title">Download for <br> <b>Google Chrome</b></p>
+							</div>
+						</a>
+					</div>
+				</div></div><div class="owl-item" style="width: 1160px;"><div class="instruction__step" data-hash="second">
+					<div class="instruction__left">
+						<img loading="eager" width="545" height="348" class="instruction__step-image" src="./Olymp Robot – Trading tool_files/instrDesk2.webp" alt="">
+					</div>
+					<div class="instruction__right">
+						<h4 class="instruction__step-title">Register an account through the Olymp Robot system</h4>
+						<div class="instruction__step-description desktop tablet">
+							<p>Registration is the first step of activation. Most of the features will not be available for a non-activated account.</p>
+							<p></p>
+						</div>
+						<div class="instruction__step-description mobile">
+							<p>Registration is the first step of activation. Most of the features will not be available for a non-activated account.</p>
+							<p></p>
+						</div>
+						<a href="https://olympbot.com/en/#" class="download-button desktop tablet">
+							<div class="download-button-container">
+								<img width="30" height="30" loading="eager" class="download-button-image" src="./Olymp Robot – Trading tool_files/logo-icon.svg" alt="">
+								<p class="download-button-title">Open <b>Registration form</b></p>
+							</div>
+						</a>
+					</div>
+				</div></div><div class="owl-item" style="width: 1160px;"><div class="instruction__step" data-hash="third">
+					<div class="instruction__left">
+						<img loading="eager" width="545" height="348" class="instruction__step-image" src="./Olymp Robot – Trading tool_files/instrDesk3.webp" alt="">
+					</div>
+					<div class="instruction__right">
+						<h4 class="instruction__step-title">Make a deposit from 100$</h4>
+						<div class="instruction__step-description desktop tablet">
+							<p>Make sure you have completed the first step before making a deposit.</p>
+						</div>
+						<div class="instruction__step-description mobile">
+							<p>Make sure you have completed the first step before making a deposit.</p>
+						</div>
+						<a rel="noreferrer" href="https://olymptrade.com/cabinet#tab=recharge" class="download-button desktop tablet" target="_blank">
+							<div class="download-button-container">
+								<img width="30" height="30" loading="eager" class="download-button-image" src="./Olymp Robot – Trading tool_files/plus.svg" alt="">
+								<p class="download-button-title">Make a <b>Deposit</b></p>
+							</div>
+						</a>
+					</div>
+				</div></div><div class="owl-item" style="width: 1160px;"><div class="instruction__step" data-hash="four">
+					<div class="instruction__left">
+						<img loading="eager" width="545" height="348" class="instruction__step-image" src="./Olymp Robot – Trading tool_files/instrDesk4.webp" alt="">
+					</div>
+					<div class="instruction__right">
+						<h4 class="instruction__step-title">Congratulations!</h4>
+						<div class="instruction__step-description desktop tablet">
+							<p>You can use all the features of Olymp Robot and fully automate your trading on the Olymp Trade platform!</p>
+						</div>
+						<div class="instruction__step-description mobile">
+							<p>You can use all the features of Olymp Robot and fully automate your trading on the Olymp Trade platform!</p>
+						</div>
+						<a rel="noreferrer" href="https://olymptrade.com/platform" class="download-button desktop tablet" target="_blank">
+							<div class="download-button-container">
+								<img width="30" height="31" loading="eager" class="download-button-image" src="./Olymp Robot – Trading tool_files/olymptrade.svg" alt="">
+								<p class="download-button-title" style="width:150px">Open the <b>platform</b></p>
+							</div>
+						</a>
+					</div>
+				</div></div></div></div><div class="owl-dots disabled"></div></div>
+			<div class="instruction__steps-nav"><div class="owl-prev disabled"><div class="instruction__previous-step"></div></div>
+				
+				<div class="instruction__current-step">
+					<a class="instruction__steps active" href="https://olympbot.com/en/#first">1</a>
+					<a class="instruction__steps" href="https://olympbot.com/en/#second">2</a>
+					<a class="instruction__steps" href="https://olympbot.com/en/#third">3</a>
+					<a class="instruction__steps" href="https://olympbot.com/en/#four">4</a>
+				</div>
+				
+			<div class="owl-next"><div class="instruction__next-step"></div></div></div>
+		</div>
+		<div class="instruction__tab-content" id="mobile" style="display: none;">
+			<div class="owl-carousel owl-theme owl-loaded owl-hidden">
+				
+				
+				
+				
+			<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 4640px;"><div class="owl-item active" style="width: 1160px;"><div class="instruction__step" data-hash="mfirst">
+					<div class="instruction__left">
+						<img loading="eager" width="172" height="365" class="instruction__step-image" src="./Olymp Robot – Trading tool_files/instrPhone1.webp" alt="">
+					</div>
+					<div class="instruction__right">
+						<h4 class="instruction__step-title">Install the app from Google Play</h4>
+						<div class="instruction__step-description desktop tablet">
+							<p>After installation, you can start trading on a demo account. </p>
+							<p class="desktop">To trade on a real account and receive profitable signals from Olymp Robot Cloud Analytics, you need to go through the activation steps.</p>
+						</div>
+						<div class="instruction__step-description mobile">
+							<p>After installation, you can start trading on a demo account. </p>
+							<p class="desktop">To trade on a real account and receive profitable signals from Olymp Robot Cloud Analytics, you need to go through the activation steps.</p>
+							<a rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.olymp.robot" class="download-button-google-play desktop" target="_blank">
+								<img width="300" height="116" loading="eager" class="download-button-image" src="./Olymp Robot – Trading tool_files/play-en.svg" alt="">
+							</a>
+							<!-- <a rel="noreferrer" href="/res/OlympBot.apk" class="download-button-google-play desktop" download>
+								<img width="300" height="116" loading="eager" class="download-button-image" src="/res/icons/other/play-en.svg" alt="">
+							</a> -->
+						</div>
+						<a rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.olymp.robot" class="download-button-google-play desktop tablet" target="_blank">
+							<img width="150" height="58" loading="eager" class="download-button-image" src="./Olymp Robot – Trading tool_files/play-en.svg" alt="">
+						</a>
+						<!-- <a rel="noreferrer" href="/res/OlympBot.apk" class="download-button-google-play desktop tablet" download>
+							<img width="150" height="58" loading="eager" class="download-button-image" src="/res/icons/other/play-en.svg" alt="">
+						</a> -->
+					</div>
+				</div></div><div class="owl-item" style="width: 1160px;"><div class="instruction__step" data-hash="msecond">
+					<div class="instruction__left">
+						<img loading="eager" width="172" height="365" class="instruction__step-image" src="./Olymp Robot – Trading tool_files/instrPhone2.webp" alt="">
+					</div>
+					<div class="instruction__right">
+						<h4 class="instruction__step-title">Register an account through the Olymp Robot system</h4>
+						<div class="instruction__step-description desktop tablet">
+							<p>Registration is the first step of activation. Most of the features will not be available for a non-activated account.</p>
+							<p></p>
+						</div>
+						<div class="instruction__step-description mobile">
+							<p>Registration is the first step of activation. Most of the features will not be available for a non-activated account.</p>
+							<p></p>
+						</div>
+					
+					</div>
+				</div></div><div class="owl-item" style="width: 1160px;"><div class="instruction__step" data-hash="mthird">
+					<div class="instruction__left">
+						<img width="172" height="365" loading="eager" class="instruction__step-image" src="./Olymp Robot – Trading tool_files/instrPhone3.webp" alt="">
+					</div>
+					<div class="instruction__right">
+						<h4 class="instruction__step-title">Make a deposit from 100$</h4>
+						<div class="instruction__step-description desktop tablet">
+							<p>Make sure you have completed the first step before making a deposit.</p>
+						</div>
+						<div class="instruction__step-description mobile">
+							<p>Make sure you have completed the first step before making a deposit.</p>
+						</div>
+					</div>
+				</div></div><div class="owl-item" style="width: 1160px;"><div class="instruction__step" data-hash="mfour">
+					<div class="instruction__left">
+						<img width="172" height="365" loading="eager" class="instruction__step-image" src="./Olymp Robot – Trading tool_files/instrPhone4.webp" alt="">
+					</div>
+					<div class="instruction__right">
+						<h4 class="instruction__step-title"><img loading="eager" width="30" height="30" class="instruction__step-title-icon desktop tablet" src="./Olymp Robot – Trading tool_files/done-green.svg" alt="">Congratulations!</h4>
+						<div class="instruction__step-description desktop tablet">
+							<p>You can use all the features of Olymp Robot and fully automate your trading on the Olymp Trade platform!</p>
+						</div>
+						<div class="instruction__step-description mobile">
+							<p>You can use all the features of Olymp Robot and fully automate your trading on the Olymp Trade platform!</p>
+						</div>
+					</div>
+				</div></div></div></div><div class="owl-dots disabled"></div></div>
+			<div class="instruction__steps-nav"><div class="owl-prev disabled"><div class="instruction__previous-step"></div></div>
+				
+				<div class="instruction__current-step">
+					<a class="instruction__steps active" href="https://olympbot.com/en/#mfirst">1</a>
+					<a class="instruction__steps" href="https://olympbot.com/en/#msecond">2</a>
+					<a class="instruction__steps" href="https://olympbot.com/en/#mthird">3</a>
+					<a class="instruction__steps" href="https://olympbot.com/en/#mfour">4</a>
+				</div>
+			
+		<div class="owl-next"><div class="instruction__next-step"></div></div></div>
+	</div>
+	</div>
+</div></section>
+
+<section class="site-section scrollspy" id="rating">
+	<div class="container">
+			<div class="instruction__inline">
+		<div class="instruction__inline-div">
+			<h2 class="site-section__title">Rating</h2>
+		</div>
+		<div class="instruction__inline-div">
+			<div class="rating__tab-group-container">
+				<div class="rating__tab-group">
+					<a class="rating__tab active" href="https://olympbot.com/en/#today">Today</a>
+					<a class="rating__tab" href="https://olympbot.com/en/#month">30 days</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="rating__tabs-content-container">
+		<div class="rating__tab-content" id="today">
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+						<th>Nickname</th>
+						<th><span class="desktop tablet">Country</span></th>
+						<th class="desktop tablet">Deals</th>
+						<th>
+							Profit							<span class="rating__table-info-icon desktop tablet" data-tippy-content="The rating takes into only real accounts">?</span>
+							<span class="rating__table-info-asterisk mobile">*</span>
+						</th>
+					</tr>
+				</thead>
+					<tbody>
+						
+                    <tr>
+                        <td><span class="rating__table-place">1</span></td>
+                        <td>
+                            Shadowmoon3
+                            <div class="rating__table-deals mobile">
+                                Deals: 449
+                            </div>
+                        </td>
+                        <td>
+                            <img width="25" height="25" class="rating__table-country" src="./Olymp Robot – Trading tool_files/SD.svg" onerror="this.onerror=null;this.src=&#39;/res/icons/country_flags/XX.svg&#39;" alt="SD">
+                            <span class="desktop">SD</span>
+                        </td>
+                        <td class="desktop tablet">449</td>
+                        <td>$ 954</td>
+                    </tr>
+                
+                    <tr>
+                        <td><span class="rating__table-place">2</span></td>
+                        <td>
+                            gopaloo
+                            <div class="rating__table-deals mobile">
+                                Deals: 350
+                            </div>
+                        </td>
+                        <td>
+                            <img width="25" height="25" class="rating__table-country" src="./Olymp Robot – Trading tool_files/PK.svg" onerror="this.onerror=null;this.src=&#39;/res/icons/country_flags/XX.svg&#39;" alt="PK">
+                            <span class="desktop">PK</span>
+                        </td>
+                        <td class="desktop tablet">350</td>
+                        <td>$ 744</td>
+                    </tr>
+                
+                    <tr>
+                        <td><span class="rating__table-place">3</span></td>
+                        <td>
+                            SatoshiTokeamoto2
+                            <div class="rating__table-deals mobile">
+                                Deals: 315
+                            </div>
+                        </td>
+                        <td>
+                            <img width="25" height="25" class="rating__table-country" src="./Olymp Robot – Trading tool_files/WS.svg" onerror="this.onerror=null;this.src=&#39;/res/icons/country_flags/XX.svg&#39;" alt="WS">
+                            <span class="desktop">WS</span>
+                        </td>
+                        <td class="desktop tablet">315</td>
+                        <td>$ 669</td>
+                    </tr>
+                
+                    <tr>
+                        <td><span class="rating__table-place">4</span></td>
+                        <td>
+                            Chillkiller2
+                            <div class="rating__table-deals mobile">
+                                Deals: 305
+                            </div>
+                        </td>
+                        <td>
+                            <img width="25" height="25" class="rating__table-country" src="./Olymp Robot – Trading tool_files/AR.svg" onerror="this.onerror=null;this.src=&#39;/res/icons/country_flags/XX.svg&#39;" alt="AR">
+                            <span class="desktop">AR</span>
+                        </td>
+                        <td class="desktop tablet">305</td>
+                        <td>$ 648</td>
+                    </tr>
+                
+                    <tr>
+                        <td><span class="rating__table-place">5</span></td>
+                        <td>
+                            fFrenzy
+                            <div class="rating__table-deals mobile">
+                                Deals: 301
+                            </div>
+                        </td>
+                        <td>
+                            <img width="25" height="25" class="rating__table-country" src="./Olymp Robot – Trading tool_files/IN.svg" onerror="this.onerror=null;this.src=&#39;/res/icons/country_flags/XX.svg&#39;" alt="IN">
+                            <span class="desktop">IN</span>
+                        </td>
+                        <td class="desktop tablet">301</td>
+                        <td>$ 641</td>
+                    </tr>
+                
+					</tbody>
+				</table>
+			</div>
+			<div class="rating__tab-content" id="month">
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th>Nickname</th>
+							<th><span class="desktop tablet">Country</span></th>
+							<th class="desktop tablet">Deals</th>
+							<th>
+								Profit								<span class="rating__table-info-icon desktop tablet" data-tippy-content="The rating takes into only real accounts">?</span>
+								<span class="rating__table-info-asterisk mobile">*</span>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+                    <tr>
+                        <td><span class="rating__table-place">1</span></td>
+                        <td>
+                            sick_rebellious_names2
+                            <div class="rating__table-deals mobile">
+                                Deals: 17264
+                            </div>
+                        </td>
+                        <td>
+                            <img width="25" height="25" class="rating__table-country" src="./Olymp Robot – Trading tool_files/SA.svg" onerror="this.onerror=null;this.src=&#39;/res/icons/country_flags/XX.svg&#39;" alt="SA">
+                            <span class="desktop">SA</span>
+                        </td>
+                        <td class="desktop tablet">17264</td>
+                        <td>$ 36624</td>
+                    </tr>
+                
+                    <tr>
+                        <td><span class="rating__table-place">2</span></td>
+                        <td>
+                            Iron-Cut
+                            <div class="rating__table-deals mobile">
+                                Deals: 12256
+                            </div>
+                        </td>
+                        <td>
+                            <img width="25" height="25" class="rating__table-country" src="./Olymp Robot – Trading tool_files/SA.svg" onerror="this.onerror=null;this.src=&#39;/res/icons/country_flags/XX.svg&#39;" alt="SA">
+                            <span class="desktop">SA</span>
+                        </td>
+                        <td class="desktop tablet">12256</td>
+                        <td>$ 26002</td>
+                    </tr>
+                
+                    <tr>
+                        <td><span class="rating__table-place">3</span></td>
+                        <td>
+                            Crazy_lady
+                            <div class="rating__table-deals mobile">
+                                Deals: 11643
+                            </div>
+                        </td>
+                        <td>
+                            <img width="25" height="25" class="rating__table-country" src="./Olymp Robot – Trading tool_files/th(1).svg" onerror="this.onerror=null;this.src=&#39;/res/icons/country_flags/XX.svg&#39;" alt="TH">
+                            <span class="desktop">TH</span>
+                        </td>
+                        <td class="desktop tablet">11643</td>
+                        <td>$ 24701</td>
+                    </tr>
+                
+                    <tr>
+                        <td><span class="rating__table-place">4</span></td>
+                        <td>
+                            Blueberry63
+                            <div class="rating__table-deals mobile">
+                                Deals: 11293
+                            </div>
+                        </td>
+                        <td>
+                            <img width="25" height="25" class="rating__table-country" src="./Olymp Robot – Trading tool_files/AR.svg" onerror="this.onerror=null;this.src=&#39;/res/icons/country_flags/XX.svg&#39;" alt="AR">
+                            <span class="desktop">AR</span>
+                        </td>
+                        <td class="desktop tablet">11293</td>
+                        <td>$ 23959</td>
+                    </tr>
+                
+                    <tr>
+                        <td><span class="rating__table-place">5</span></td>
+                        <td>
+                            carbon63
+                            <div class="rating__table-deals mobile">
+                                Deals: 11067
+                            </div>
+                        </td>
+                        <td>
+                            <img width="25" height="25" class="rating__table-country" src="./Olymp Robot – Trading tool_files/AR.svg" onerror="this.onerror=null;this.src=&#39;/res/icons/country_flags/XX.svg&#39;" alt="AR">
+                            <span class="desktop">AR</span>
+                        </td>
+                        <td class="desktop tablet">11067</td>
+                        <td>$ 23479</td>
+                    </tr>
+                
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="rating__table-notice mobile">* The rating takes into only real accounts</div>
+	</div>
+	</section></div>
+
+
+<section class="site-section scrollspy" id="faq">
+	<div class="container">
+		<h2 class="site-section__title">FAQ</h2>
+		<div class="accordion-container">
+			
+	<div class="accordion active">
+		<div class="accordion_tab"><span>What to do if trading on a demo account stops working?</span></div>
+		<div class="accordion_content">
+			<p>There is a trading limit for Non-Activated Accounts. You can restart the robot.</p>
+             <p>To remove the restriction activate your account, or start a new trading session.</p>
+		</div>
+	</div>
+	<div class="accordion">
+		<div class="accordion_tab"><span>How to activate the robot?</span></div>
+		<div class="accordion_content">
+			<p>Robot activation:</p>
+			<p>1. If your account is not registered through the Olymp Robot system, go through the registration form.<br>2. After completing the first step, make a deposit of $100.</p>
+		</div>
+	</div>
+	<div class="accordion">
+		<div class="accordion_tab"><span>How do trading signals work?</span></div>
+			<div class="accordion_content">
+				<p>The Olymp Robot Cloud Analytics system analyzes the market using over 20 technical indicators in real-time. Before each bet, the robot selects the most accurate signals and trades based on these indicators.</p>
+				<p></p>
+			</div>
+		</div>
+	</div>
+		</div>
+	
+</section>
+
+<footer class="site-footer">
+			<div class="container">
+				<div class="download__links">
+					<div class="download__link desktop tablet">
+						<a rel="noreferrer" href="https://chrome.google.com/webstore/detail/olymp-bot-%E2%80%93-olymp-trade-r/epechikapdipcpfihonkhmnknbjmnlmi" class="download-button" target="_blank">
+							<div class="download-button-container">
+								<img loading="eager" width="30" height="30" class="download-button-image" src="./Olymp Robot – Trading tool_files/chrome.svg" alt="">
+								<p class="download-button-title">Download for <br> <b>Google Chrome</b></p>
+							</div>
+						</a>
+					</div>
+					<div class="download__link desktop tablet">
+						<a rel="noreferrer" href="https://chrome.google.com/webstore/detail/olymp-bot-%E2%80%93-olymp-trade-r/epechikapdipcpfihonkhmnknbjmnlmi" class="download-button" target="_blank">
+							<div class="download-button-container">
+								<img loading="eager" width="30" height="30" class="download-button-image" src="./Olymp Robot – Trading tool_files/opera.svg" alt="">
+								<p class="download-button-title">Download for <br> <b>Opera</b></p>
+							</div>
+						</a>
+					</div>
+					<div class="download__link">
+						<a rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.olymp.robot" class="download-button-google-play" target="_blank">
+							<img loading="eager" width="165" height="64" class="download-button-image" src="./Olymp Robot – Trading tool_files/play-en.svg" alt="">
+						</a>
+						<!-- <a rel="noreferrer" href="/res/OlympBot.apk" class="download-button-google-play" download>
+							<img loading="eager" width="165" height="64" class="download-button-image" src="/res/icons/other/play-en.svg" alt="">
+						</a> -->
+					</div>
+				</div>
+				<div class="site-footer__tablet-bottom tablet">
+					<div class="download__link download__link-google">
+						<a rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.olymp.robot" class="download-button-google-play" target="_blank">
+							<img loading="eager" width="300" height="116" class="download-button-image" src="./Olymp Robot – Trading tool_files/play-en.svg" alt="">
+						</a>
+						<!-- <a rel="noreferrer" href="/res/OlympBot.apk" class="download-button-google-play" download>
+							<img loading="eager" width="300" height="116" class="download-button-image" src="/res/icons/other/play-en.svg" alt="">
+						</a> -->
+					</div>
+					<div class="site-footer__tablet-copyright-container">
+						<div class="site-footer__footnote"><p>Legal Information</p>
+							<p>© Olymp Robot, 2022</p></div>
+						<div class="site-footer__copyright">
+                            <p>
+                                The robot was created by a team of independent developers and is not affiliated with Olymp Trade. We neither provide trading, financial, or investment advice nor encourage mentioned activities.                            </p>
+                            <br>
+                            <p>
+                                Risk warning: Trading involves high risks including the risk of losing some or all of your investment amount and may not be suitable for all investors.                            </p>
+						</div>
+					</div>
+				</div>
+				<div class="pc-versions mobile">
+					<div class="pc-versions__title">Desktop</div>
+					<div class="pc-versions__icon-list">
+						<img loading="eager" width="30" height="30" class="pc-versions__icon" src="./Olymp Robot – Trading tool_files/chrome.svg" alt="">
+						<img loading="eager" width="30" height="30" class="pc-versions__icon" src="./Olymp Robot – Trading tool_files/opera.svg" alt="">
+					</div>
+				</div>
+				<div class="site-footer__copyright-container desktop mobile">
+					<div class="site-footer__copyright">
+                        <p>
+                            The robot was created by a team of independent developers and is not affiliated with Olymp Trade. We neither provide trading, financial, or investment advice nor encourage mentioned activities.                        </p>
+                        <br>
+                        <p>
+                            Risk warning: Trading involves high risks including the risk of losing some or all of your investment amount and may not be suitable for all investors.                        </p>
+					</div>
+					<div class="site-footer__footnote"><a href="https://olympbot.com/terms/" class="policy">Legal Information</a>
+						<p class="white">© Olymp Robot, 2022</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	
+	<!--<script defer src="/js/app.js"></script>-->
+    <script type="module" defer="" src="./Olymp Robot – Trading tool_files/regForm.js"></script>
+    <script async="" src="./Olymp Robot – Trading tool_files/js(1)"></script>
+    <script src="./Olymp Robot – Trading tool_files/uuidv4.min.js"></script>
+    <script async="" type="module">
+        (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking getBrowserFingerprintId crossPlatformIds lastAttributedTouchData".split(" "), 0);
+
+        let uid = document.cookie.replace(/(?:(?:^|.*;\s*)uid\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (document.cookie.replace(/(?:(?:^|.*;\s*)uid\s*\=\s*([^;]*).*$)|^.*$/, "$1").length === 0) {
+            uid = uuidv4();
+			const domain = location.host.includes('ppnet') ? location.host : location.host.split('.').slice(-2).join('.');
+            document.cookie = `uid=${uid}; domain=${domain}`;
+		}
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-130892120-2');
+        gtag('set', {'user_id': uid});
+
+		if (!location.host.includes('ppnet')) {
+			branch.init('key_live_cnLJItrHRXsmhrdlLLZl1kjnuEiEIvXh');
+			branch.setIdentity(uid);
+		}
+    </script>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

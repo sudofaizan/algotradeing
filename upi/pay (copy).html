@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+.button {
+  background-color: #006ca3; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+}
+
+h22 {
+  font-family: "Sofia", sans-serif;
+  font-size: 40px;
+  text-shadow: 4px 4px 4px #ababab;
+  color: white;
+}
+h1 {
+  font-size: 30px;
+  text-align: center;
+   color: white;
+}
+ 
+
+ 
+b1
+{
+font-size: 40px;
+}
+input[type=text], select {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 40%;
+  background-color: #006ca3;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #006ca3;
+}
+</style>
+</head>
+<body>
+
+ <div class="center1">
+   <h22>Pay Subscription Amount With UPI Mode</h22>
+  
+</div>
+ <h1>
+   Hello user! 
+ </h1>
+ <h1>
+ Step 1) Open any UPI app 
+ </h1>
+   <input type="text" value="autotrader@upi" id="myInput">
+    step 2) copy UPI id mentioned 
+  
+ 
+     <input type="submit" name="b1" value="COPY UPI ID"
+ onclick="myFunction()">
+   <h1>
+ and pay your subscription Amount !
+ </h1>
+ 
+ <script>
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+  
+  /* Alert the copied text */
+  alert("UPI ID IS COPIED " + copyText.value);
+}
+</script>
+  
+
+</body>
+<body style="background-color:black;">
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+<script>
+  function myFunction() {
+    /* Get the text field */
+    var copyText = document.getElementById("myInput");
+  
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.value);
+    
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+  }
+  </script>
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+}
+input {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+}
+button {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+}
+h1 {text-align: center;}
+form {text-align: center;}
+p {text-align: center;}
+pre {
+ 
+  text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+<body>
+<body style="background-color:black;">
+ <h1 class="font-effect-emboss">PAYMENT GATEWAY</h1>
+<p class="font-effect-emboss">Hello User!</p>
+ 
+<div class="text">
+   
+<pre style="color:white">
+   As you have selected to make payment
+through PERFECTMONEY  tap on pay now 
+
+<button onclick="location.href='trn.html'">what is TRN id?</button>
+<button onclick="location.href='/index.html'">Jump to Login page</button>
+</pre>
+
+
+</div>
+<form action="https://perfectmoney.com/api/step1.asp" method="POST">
+    <input type="hidden" name="PAYEE_ACCOUNT" value="U34059470">
+    <input type="hidden" name="PAYEE_NAME" value="darkweb">
+    <input type="hidden" name="PAYMENT_ID" value="darkweb">
+    <input type="hidden" name="PAYMENT_AMOUNT" value="66.12">
+    <input type="hidden" name="PAYMENT_UNITS" value="USD">
+    <input type="hidden" name="STATUS_URL" value="Faizii.official@gmail.com">
+    <input type="hidden" name="PAYMENT_URL" value="https://api.telegram.org/bot5234920052:AAEDxAVyUMHE5p_t1FwhC3HRUC9FycEz_Tc/sendMessage?chat_id=1395896130&text=server%20got%20new%20ip%20=%20paymentrecive10usd">
+    <input type="hidden" name="PAYMENT_URL_METHOD" value="httpsapitelegramorgbot5234920052AAEDxAVyUMHE5pt1FwhC3HRUC9FycEzTcsendMessagechatid1395896130textserver20got20new20ip2020paymentrecive10usd">
+    <input type="hidden" name="NOPAYMENT_URL" value="https://api.telegram.org/bot5234920052:AAEDxAVyUMHE5p_t1FwhC3HRUC9FycEz_Tc/sendMessage?chat_id=1395896130&text=server%20got%20new%20ip%20=%20paymentfail10usd">
+    <input type="hidden" name="NOPAYMENT_URL_METHOD" value="httpsapitelegramorgbot5234920052AAEDxAVyUMHE5pt1FwhC3HRUC9FycEzTcsendMessagechatid1395896130textserver20got20new20ip2020paymentfail">
+    <input type="hidden" name="SUGGESTED_MEMO" value="trades fund">
+    <input type="hidden" name="BAGGAGE_FIELDS" value="">
+    <input type="submit" name="PAYMENT_METHOD" value="Pay Now!">
+    </form>
+
+
+</body>
+</html>
+
+
+
