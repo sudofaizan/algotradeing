@@ -7,7 +7,7 @@ export amt=$(echo $(( $RANDOM % 50 + 3 )))
 export inc=$(echo $(( $RANDOM % 30 + 1 )))
 export aftr=$amt
 export i=$(echo $(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 )))
-export a="EUR:USD_OTC"
+export a="CryptoIDX"
 export t="1 MIN"
 for run in {1..28}; do
 n=$((n-1))
