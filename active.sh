@@ -3,7 +3,7 @@ do
 export arg="WIN"
 export n=30
 export p=30
-export amt=10
+export amt=$(echo $(( $RANDOM % 10 + 6 )))
 export inc=0.80
 export aftr=$amt
 export i=$(echo $(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 )))

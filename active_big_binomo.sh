@@ -3,8 +3,8 @@ do
 export arg="WIN"
 export n=30
 export p=30
-export amt=$(echo $(( $RANDOM % 50 + 3 )))
-export inc=$(echo $(( $RANDOM % 30 + 1 )))
+export amt=$(echo $(( $RANDOM % 50 + 6 )))
+export inc=$(echo $(( $RANDOM % 6 + 1 )))
 export aftr=$amt
 export i=$(echo $(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 ))$(( $RANDOM % 50 + 1 )))
 export a="CryptoIDX"
