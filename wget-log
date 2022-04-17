@@ -1,0 +1,6 @@
+--2022-04-17 20:24:17--  https://api.telegram.org/bot5234920052:AAEDxAVyUMHE5p_t1FwhC3HRUC9FycEz_Tc/sendMessage?chat_id=@algo_Tradeing
+Resolving api.telegram.org (api.telegram.org)... 149.154.167.220, 2001:67c:4e8:1033:1:100:0:a, 2001:67c:4e8:1033:5:100:0:a, ...
+Connecting to api.telegram.org (api.telegram.org)|149.154.167.220|:443... connected.
+HTTP request sent, awaiting response... 400 Bad Request
+2022-04-17 20:24:18 ERROR 400: Bad Request.
+
