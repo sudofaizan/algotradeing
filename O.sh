@@ -31,7 +31,7 @@ $(pwd)/xh "https://api.telegram.org/bot5234920052:AAEDxAVyUMHE5p_t1FwhC3HRUC9Fyc
 export data3="MACHINE LEARNING ALGORITHM IS LEARNING MARKET OF $a @algo_tradeing IS WAITING FOR ANALYSIS TO COMPLETE"
 $(pwd)/xh "https://api.telegram.org/bot5234920052:AAEDxAVyUMHE5p_t1FwhC3HRUC9FycEz_Tc/sendMessage?chat_id=@algo_Tradeing&parse_mode=markdownv2&text=||$data3||"
 sleep 59
-export aftr=$(echo $after 1 | awk '{print $1 - $2}')
+export aftr=$(echo $after 1 | awk '{print $1 }')
 export data2="RESULT FETCHED FROM SERVER FOR USER = $i TRADE= $arg (ASSEST=$a , TIME=$t , Trades left= $n / $p ) , USER_ID=$i , initial bal ${amt} USD current bal $aftr USD:   "
 $(pwd)/xh "https://api.telegram.org/bot5234920052:AAEDxAVyUMHE5p_t1FwhC3HRUC9FycEz_Tc/sendMessage?chat_id=@algo_Tradeing&parse_mode=markdown&text=$data2"
 export data4="SERVER IS WAITNG FOR TRADE TO COMPLETE FOR USER $i "
