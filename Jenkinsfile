@@ -13,11 +13,13 @@ pipeline {
                 docker run  -d --name msthree  dexterquazi/micros_bigo
                 docker run  -d --name msfour dexterquazi/micros_bigb
             }
-        stage('running main App container'){
+            
+        }
+        stage('createing main app container'){
             steps{
                 docker run -d --name main -p 80:80 -p 443:443 dexterquazi/app 
             }
-        }
+
         }
     }
 }
