@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'echo "Hello World"'
                 sh '''
-                    docker ps
+                    docker rm -f msone mstwo msthree msfour main 
                 '''
             }
         }
