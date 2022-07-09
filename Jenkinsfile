@@ -2,7 +2,7 @@ pipeline {
     agent any
       stage('Running microservices'){
             steps {
-            sh 'docker ps'
+            bash 'echo hi'
             }
         }
 
