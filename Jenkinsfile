@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Removeing existing containers') {
             steps {
-                docker rm -f msone mstwo msthree msfour main 
+              sh  docker rm -f msone mstwo msthree msfour main 
             }
         }
         
