@@ -1,10 +1,23 @@
 pipeline {
     agent any
     stages {
-        stage('Example') {
+        stage('Removeing existing containers') {
             steps {
-                echo 'Hello World'
+                docker rm -f msone mstwo msthree msfour main 
             }
+        }
+        stage('Running microservices'){
+            steps {
+                docker run  -d --name msone  dexterquazi/micros_b
+                docker run  -d --name mstwo  dexterquazi/micros_o
+                docker run  -d --name msthree  dexterquazi/micros_bigo
+                docker run  -d --name msfour dexterquazi/micros_bigb
+            }
+        stage('running main App container'){
+            steps{
+                docker run -d --name main -p 80:80 -p 443:443 dexterquazi/app 
+            }
+        }
         }
     }
 }
