@@ -1,14 +1,14 @@
 pipeline {
     agent any
-      stage('Running microservices'){
+    stages {
+        stage('Build') {
             steps {
-            bash 'echo hi'
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
             }
-        }
-
-    post { 
-        always { 
-            echo 'I will always say Hello again!'
         }
     }
 }
