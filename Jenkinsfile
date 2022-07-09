@@ -29,5 +29,13 @@ pipeline {
                 '''
             }
         }
+         stage('geting public ip address') {
+            steps {
+                sh 'echo "Hello World"'
+                sh '''
+                    curl ifconfig.me
+                '''
+            }
+        }
     }
 }
